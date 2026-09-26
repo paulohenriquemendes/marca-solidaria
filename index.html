@@ -3,57 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marca Solidária – Links</title>
+<title>Marca Solidária</title>
 <meta name="description" content="Projeto Marca Solidária: inscrição de empreendedores, edital e projetos desenvolvidos.">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:#1D3D7D;
-       min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px;
-       background:linear-gradient(160deg,#142B5C 0%,#1D3D7D 55%,#3A5CA8 100%)}
-  .box{width:100%;max-width:560px;text-align:center}
-  .mark{width:64px;height:64px;margin:0 auto 18px;border-radius:16px;background:#FFC94D;color:#142B5C;
-        display:grid;place-items:center;font-weight:800;font-size:1.3rem;letter-spacing:.5px}
-  h1{color:#fff;font-size:1.9rem;letter-spacing:-.5px}
-  .sub{color:#c9d5ec;margin:10px auto 34px;max-width:32em;font-size:.98rem;line-height:1.6}
-  .links{display:flex;flex-direction:column;gap:14px}
-  a.card{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
-         border-radius:14px;padding:18px 20px;text-decoration:none;color:#fff;transition:.18s;text-align:left}
-  a.card:hover{background:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.25)}
-  a.card:hover .c-title{color:#1D3D7D}
-  a.card:hover .c-sub{color:#5A6478}
-  a.card:hover .arrow{color:#1D3D7D}
-  .c-title{font-weight:700;font-size:1.05rem;transition:.18s}
-  .c-sub{font-size:.85rem;color:#c9d5ec;margin-top:2px;transition:.18s}
-  .arrow{margin-left:auto;font-size:1.3rem;color:#FFC94D;transition:.18s}
-  .soon{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.22);
-        border-radius:14px;padding:18px 20px;text-align:left;opacity:.85}
-  .badge{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-         color:#142B5C;background:#FFC94D;border-radius:999px;padding:4px 10px}
-  footer{margin-top:34px;color:#8fa3c7;font-size:.82rem;line-height:1.6}
+  body{font-family:sans-serif;margin:0;padding:2rem 1rem;background:#fff;color:#222}
+  main{max-width:36rem;margin:0 auto}
+  h1{font-size:1.6rem}
+  p{line-height:1.5}
+  ul{list-style:none;padding:0;margin:1.5rem 0}
+  li{margin:.75rem 0}
+  footer{margin-top:2.5rem;font-size:.85rem;color:#666}
 </style>
 </head>
 <body>
-  <div class="box">
-    <div class="mark">MS</div>
+  <main>
     <h1>Marca Solidária</h1>
-    <p class="sub">Identidade visual gratuita para pequenos negócios da comunidade, desenvolvida por estudantes de Design Gráfico do Curso Técnico em Informática, integrado ao Ensino Médio.</p>
+    <p>Identidade visual gratuita para pequenos negócios da comunidade, desenvolvida por
+    estudantes de Design Gráfico do Curso Técnico em Informática, integrado ao Ensino Médio.</p>
 
-    <div class="links">
-      <a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform" target="_blank">
-        <div><div class="c-title">Como se inscrever</div><div class="c-sub">Formulário de inscrição para empreendedores (Google Forms)</div></div>
-        <span class="arrow">→</span>
-      </a>
-      <a class="card" href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing" target="_blank">
-        <div><div class="c-title">Edital completo</div><div class="c-sub">Regras, critérios de seleção e cronograma do projeto (Google Docs)</div></div>
-        <span class="arrow">→</span>
-      </a>
-      <div class="soon">
-        <div><div class="c-title">Projetos desenvolvidos</div><div class="c-sub">Galeria com as marcas criadas nas edições anteriores do projeto</div></div>
-        <span class="badge">Em breve</span>
-      </div>
-    </div>
+    <ul>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform" target="_blank">Como se inscrever</a> — formulário de inscrição para empreendedores</li>
+      <li><a href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing" target="_blank">Edital completo</a> — regras, critérios de seleção e cronograma</li>
+      <li>Projetos desenvolvidos — em breve</li>
+    </ul>
 
-    <footer>Professor responsável: Paulo Henrique de Oliveira Mendes<br>Serviço voluntário e gratuito, conforme o Edital de Seleção.</footer>
-  </div>
+    <footer>
+      <p>Professor responsável: Paulo Henrique de Oliveira Mendes</p>
+      <p>Serviço voluntário e gratuito, conforme o Edital de Seleção.</p>
+    </footer>
+  </main>
 </body>
 </html>
