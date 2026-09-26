@@ -6,37 +6,54 @@
 <title>Marca Solidária</title>
 <meta name="description" content="Projeto Marca Solidária: inscrição de empreendedores, edital e projetos desenvolvidos.">
 <style>
-  :root{--azul:#1D3D7D;--azul-escuro:#142B5C}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:sans-serif;background:#eef1f7;color:#222;line-height:1.5}
-  header{background:var(--azul);text-align:center;padding:2.5rem 1rem}
-  header img{height:90px;width:auto}
-  main{max-width:34rem;margin:2rem auto 0;background:#fff;border:1px solid #dde3ee;padding:2rem}
-  h1{font-size:1.6rem;color:var(--azul-escuro)}
-  ul{list-style:none;margin:1.5rem 0}
-  li{margin:.9rem 0;padding-left:1rem;border-left:4px solid var(--azul)}
-  a{color:var(--azul)}
-  footer{max-width:34rem;margin:1rem auto 3rem;font-size:.85rem;color:#666}
+  body{font-family:sans-serif;background:#1D3D7D;color:#fff;min-height:100vh;
+       display:flex;flex-direction:column;align-items:center;padding:2.5rem 1.25rem 3rem}
+  .box{width:100%;max-width:26rem}
+  header{text-align:center;margin-bottom:1.5rem}
+  header img{height:110px;width:auto}
+  h1{font-size:1.5rem;text-align:center;letter-spacing:-.3px}
+  .sub{color:#c9d5ec;text-align:center;font-size:.95rem;line-height:1.55;margin:.75rem auto 2rem;max-width:24rem}
+  ul{list-style:none;display:flex;flex-direction:column;gap:.9rem}
+  li{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:12px;
+     padding:1rem 1.1rem;transition:background .15s}
+  li:hover{background:rgba(255,255,255,.16)}
+  a{color:#FFC94D;text-decoration:none;font-weight:700}
+  .desc{color:#dce4f5;font-size:.85rem;margin-top:.25rem;display:block}
+  .em-breve{color:#FFC94D;font-size:.72rem;font-weight:700;text-transform:uppercase;
+            letter-spacing:.08em;border:1px solid #FFC94D;border-radius:999px;padding:.2rem .6rem;margin-left:.4rem;vertical-align:middle}
+  footer{margin-top:2.5rem;text-align:center;color:#a9b8d6;font-size:.8rem;line-height:1.7}
 </style>
 </head>
 <body>
-  <header>
-    <img src="logo.svg" alt="Logo Marca Solidária">
-  </header>
-  <main>
+  <div class="box">
+    <header>
+      <img src="logo.svg" alt="Logo Marca Solidária">
+    </header>
+
     <h1>Marca Solidária</h1>
-    <p>Identidade visual gratuita para pequenos negócios da comunidade, desenvolvida por
+    <p class="sub">Identidade visual gratuita para pequenos negócios da comunidade, desenvolvida por
     estudantes de Design Gráfico do Curso Técnico em Informática, integrado ao Ensino Médio.</p>
 
     <ul>
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform" target="_blank">Como se inscrever</a> — formulário de inscrição para empreendedores</li>
-      <li><a href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing" target="_blank">Edital completo</a> — regras, critérios de seleção e cronograma</li>
-      <li>Projetos desenvolvidos — em breve</li>
+      <li>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform" target="_blank">Como se inscrever</a>
+        <span class="desc">Formulário de inscrição para empreendedores</span>
+      </li>
+      <li>
+        <a href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing" target="_blank">Edital completo</a>
+        <span class="desc">Regras, critérios de seleção e cronograma</span>
+      </li>
+      <li>
+        Projetos desenvolvidos <span class="em-breve">Em breve</span>
+        <span class="desc">Marcas criadas nas edições anteriores do projeto</span>
+      </li>
     </ul>
-  </main>
-  <footer>
-    <p>Professor responsável: Paulo Henrique de Oliveira Mendes</p>
-    <p>Serviço voluntário e gratuito, conforme o Edital de Seleção.</p>
-  </footer>
+
+    <footer>
+      Professor responsável: Paulo Henrique de Oliveira Mendes<br>
+      Serviço voluntário e gratuito, conforme o Edital de Seleção.
+    </footer>
+  </div>
 </body>
 </html>
