@@ -1,221 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<!-- ============================================================
+  <!-- ============================================================
      CABEÇALHO DO DOCUMENTO
      Configurações gerais da página (título, idioma, estilos)
      ============================================================ -->
-<head>
+  <head>
+    <!-- ---- META E TÍTULO ---- -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marca Solidária</title>
+    <meta
+      name="description"
+      content="Projeto Marca Solidária: inscrição de empreendedores, edital e projetos desenvolvidos."
+    />
 
-  <!-- ---- META E TÍTULO ---- -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marca Solidária</title>
-  <meta name="description" content="Projeto Marca Solidária: inscrição de empreendedores, edital e projetos desenvolvidos.">
+    <link rel="stylesheet" href="folha-estilo.css" />
+  </head>
 
-  <!-- ============================================================
-       CSS — ESTILOS DA PÁGINA
-       Organização:
-       1. Variáveis de cor (paleta neutra)
-       2. Reset (zera margens e paddings padrão)
-       3. Estrutura geral (body — Flexbox na vertical)
-       4. Cabeçalho (logo)
-       5. Títulos e subtítulo
-       6. Lista de links (cards — Flexbox na vertical)
-       7. Rodapé
-       ============================================================ -->
-  <style>
+  <body>
+    <div class="box">
+      <header>
+        <img src="logo.png" alt="Logo Marca Solidária" />
+      </header>
 
-    /* ---- 1. VARIÁVEIS DE COR (paleta neutra em tons de cinza) ----
-       Para trocar a paleta, altere apenas aqui. */
-    :root {
-      --cor-fundo:        #1E1E1E;  /* fundo geral da página   */
-      --cor-texto:       #F2F2F2;  /* texto principal         */
-      --cor-texto-suave: #ADADAD;  /* subtítulo               */
-      --cor-descricao:   #C7C7C7;  /* descrições dos links    */
-      --cor-rodape:      #9A9A9A;  /* texto do rodapé         */
-      --cor-link:        #FFFFFF;  /* links em destaque       */
-    }
+      <h1>Marca Solidária</h1>
+      <p class="sub">
+        Identidade visual gratuita para pequenos negócios da comunidade,
+        desenvolvida por estudantes de Design Gráfico do Curso Técnico em
+        Informática.
+      </p>
 
-    /* ---- 2. RESET ----
-       Zera os estilos padrão do navegador e padroniza caixas. */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      <ul>
+        <li>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform"
+            target="_blank"
+            >Como se inscrever</a
+          >
+          <span class="desc"
+            >Inscrição para empreendedores indicados pelas equipes</span
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing"
+            target="_blank"
+            >Edital completo</a
+          >
+          <span class="desc">Regras, critérios de seleção e cronograma</span>
+        </li>
+        <li>
+          <a
+            href="https://www.behance.net/gallery/246866227/Doce-Sonho"
+            target="_blank"
+            >Projetos desenvolvidos</a
+          >
+          <span class="desc"
+            >Um dos melhores projetos da edição de 2025, na Behance</span
+          >
+        </li>
+      </ul>
 
-    /* ---- 3. ESTRUTURA GERAL ----
-       Body em Flexbox na vertical: centraliza o conteúdo. */
-    body {
-      font-family: sans-serif;
-      background: var(--cor-fundo);
-      color: var(--cor-texto);
-      min-height: 100vh;                 /* ocupa a tela inteira       */
-      display: flex;                     /* Flexbox                    */
-      flex-direction: column;            /* empilha tudo na vertical   */
-      align-items: center;               /* centraliza na horizontal   */
-      padding: 2.5rem 1.25rem 3rem;      /* respiro nas bordas        */
-    }
+      <footer>
+        Prof. responsável: Paulo H. Mendes<br />
+        Serviço voluntário e gratuito, conforme o Edital de Seleção.
+      </footer>
+    </div>
 
-    /* Caixa que limita a largura do conteúdo no celular
-       e no desktop (max-width mantém tudo legível). */
-    .box {
-      width: 100%;
-      max-width: 26rem;
-    }
-
-    /* ---- 4. CABEÇALHO (LOGO) ---- */
-    header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    header img {
-      height: 110px;
-      width: auto;
-    }
-
-    /* ---- 5. TÍTULO E SUBTÍTULO ---- */
-    h1 {
-      font-size: 1.5rem;
-      text-align: center;
-      letter-spacing: -0.3px;
-    }
-    .sub {
-      color: var(--cor-texto-suave);
-      text-align: center;
-      font-size: 0.8rem;                /* subtítulo menor            */
-      line-height: 1.55;
-      margin: 0.75rem auto 2rem;
-      max-width: 24rem;
-    }
-
-    /* ---- 6. LISTA DE LINKS (cards) ----
-       Lista em Flexbox na vertical, com espaçamento entre os cards. */
-    ul {
-      list-style: none;                  /* remove as bolinhas        */
-      display: flex;
-      flex-direction: column;            /* um card abaixo do outro    */
-      gap: 0.9rem;                       /* espaço entre os cards      */
-    }
-
-    /* Cada card da lista */
-    li {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 2px;                /* cantos quase quadrados    */
-      padding: 1rem 1.1rem;
-      transition: background 0.15s;      /* animação suave no hover   */
-    }
-    li:hover {
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    /* Links dos cards */
-    a {
-      color: var(--cor-link);
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 3px;        /* sublinhado mais afastado  */
-    }
-
-    /* Descrição abaixo de cada link */
-    .desc {
-      color: var(--cor-descricao);
-      font-size: 0.85rem;
-      margin-top: 0.25rem;
-      display: block;
-    }
-
-    /* Selo "Em breve" (use a tag <span class="em-breve"> em um link
-       que ainda não está disponível) */
-    .em-breve {
-      color: #D6D6D6;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border: 1px solid #D6D6D6;
-      border-radius: 2px;
-      padding: 0.2rem 0.6rem;
-      margin-left: 0.4rem;
-      vertical-align: middle;
-    }
-
-    /* ---- 7. RODAPÉ ---- */
-    footer {
-      margin-top: 2.5rem;
-      text-align: center;
-      color: var(--cor-rodape);
-      font-size: 0.8rem;
-      line-height: 1.7;
-    }
-
-  </style>
-</head>
-
-<!-- ============================================================
-     CORPO DA PÁGINA — CONTEÚDO VISÍVEL
-     Estrutura:
-     <body> (Flexbox vertical)
-       └── .box        (limita a largura)
-             ├── header  (logo)
-             ├── h1 + .sub (título e subtítulo)
-             ├── ul      (lista de links — cards)
-             └── footer  (rodapé)
-     ============================================================ -->
-<body>
-  <div class="box">
-
-    <!-- ---- LOGO ---- -->
-    <header>
-      <img src="logo.png" alt="Logo Marca Solidária">
-    </header>
-
-    <!-- ---- TÍTULO E SUBTÍTULO ---- -->
-    <h1>Marca Solidária</h1>
-    <p class="sub">
-      Identidade visual gratuita para pequenos negócios da comunidade, desenvolvida por
-      estudantes de Design Gráfico do Curso Técnico em Informática.
-    </p>
-
-    <!-- ---- LISTA DE LINKS ----
-         Para adicionar um novo item, copie um bloco <li>...</li>
-         e troque o link (href), o título e a descrição. -->
-    <ul>
-      <li>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfiLU1kIVXxKWVSkSDeWS4ZACi8Pv5uUNd9JALGKAL7EjR-g/viewform" target="_blank">Como se inscrever</a>
-        <span class="desc">Inscrição para empreendedores indicados pelas equipes</span>
-      </li>
-      <li>
-        <a href="https://docs.google.com/document/d/1dkLk4Lj16jtIdvvSzzYgUrpA4W1uxoP-QEklFRcqxhk/edit?usp=sharing" target="_blank">Edital completo</a>
-        <span class="desc">Regras, critérios de seleção e cronograma</span>
-      </li>
-      <li>
-        <a href="https://www.behance.net/gallery/246866227/Doce-Sonho" target="_blank">Projetos desenvolvidos</a>
-        <span class="desc">Um dos melhores projetos da edição de 2025, na Behance</span>
-      </li>
-    </ul>
-
-    <!-- ---- RODAPÉ ---- -->
-    <footer>
-      Professor responsável: Paulo Henrique de Oliveira Mendes<br>
-      Serviço voluntário e gratuito, conforme o Edital de Seleção.
-    </footer>
-
-  </div>
-
-  <!-- ============================================================
-       JAVASCRIPT
-       Espaço reservado para scripts. O site é estático (só HTML/CSS),
-       mas se precisar de interatividade (ex.: menu, contagem regressiva
-       do cronograma), escreva aqui ou crie um arquivo app.js e chame com:
-       <script src="app.js"></script>
-       ============================================================ -->
-  <script>
-    // Exemplo: escrever no console para confirmar que a página carregou
-    console.log("Página Marca Solidária carregada com sucesso!");
-  </script>
-
-</body>
+    <script>
+      // Exemplo: escrever no console para confirmar que a página carregou
+      console.log("Página Marca Solidária carregada com sucesso!");
+    </script>
+  </body>
 </html>
